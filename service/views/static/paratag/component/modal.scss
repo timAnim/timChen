@@ -1,0 +1,9 @@
+modal {
+    @extend .layout-f;
+    @extend .layout-v;
+    @extend .in-top;
+    @extend .shade-list;
+    &[pause=true] {
+        @extend .pause-blur;
+    }
+}

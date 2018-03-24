@@ -1,0 +1,18 @@
+header {
+  li {
+    >* {
+      margin: 0!important;
+    }
+  }
+  nav {
+    @extend .blink-wave;
+    cursor: pointer;
+    flex: 0 1 20%;
+    text-align: center;
+    &[checked=true] {
+      font-weight: 600;
+      color: $color-theme;
+      border-bottom: 0.4rem solid $color-theme;
+    }
+  }
+}

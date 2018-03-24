@@ -1,0 +1,170 @@
+body,
+div,
+dl,
+dt,
+dd,
+// ul,
+// ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+dialog,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+td,
+th,
+caption {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img,
+dialog {
+  border: none;
+}
+
+// ol,
+// ul,
+// li {
+//     list-style: none;
+// }
+
+input,
+textarea,
+select,
+button,
+pre {
+  font-size: 1em;
+  font-family: "Microsoft YaHei", sans-serif;
+  color: black;
+  border: none;
+  outline: none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+
+/* css common */
+
+.clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  *zoom: 1;
+}
+
+.blueDiv {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: $ftsize-default;
+  color: $color-primary;
+  background-color: $bgcolor-back;
+}
+
+modal {
+  background-color: $bgcolor-back;
+}
+
+content {
+  overflow-y: auto;
+  display: block;
+}
+
+section {
+  max-width: $width-max;
+  margin: 0 auto;
+}
+
+textarea,
+template,
+modal {
+  display: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fafafa inset;
+}
+
+a,
+button,
+li,
+h2 {
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: $ftsize-small;
+  }
+}

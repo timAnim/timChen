@@ -1,0 +1,33 @@
+h1 {
+    font-size: $ftsize-big;
+    font-weight: 600;
+}
+
+h2 {
+    color: $color-secondary;
+    height: $height-regular;
+    padding: $height-gap $padding-normal 0;
+    box-sizing: border-box;
+}
+
+h3[pt] {
+    height: $padding-normal;
+}
+
+em,
+pre,
+h1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+pre {
+    color: $color-light;
+    text-align: right;
+}
+
+.fa-icon {
+    transform: scale(1.25);
+    vertical-align: -0.2rem;
+}

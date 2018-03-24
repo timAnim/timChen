@@ -1,0 +1,28 @@
+
+label {
+    text-align: center;
+    color: $color-light;
+    &[type=switch] {
+        i {
+            @extend .in-pop;
+            &:last-child {
+                color: $color-theme;
+                display: none;
+            }
+            &:first-child {
+                display: inline-block;
+            }
+        }
+        &[checked='true'] {
+            i:first-child {
+                display: none;
+            }
+            i:last-child {
+                display: inline-block;
+            }
+        }
+    }
+    &:first-child{
+        text-align: left;
+    }
+}

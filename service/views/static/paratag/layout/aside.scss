@@ -1,0 +1,14 @@
+aside {
+    @extend .in-left;
+    overflow-y: auto;
+    display: none;
+    clip {
+        margin: $padding-normal auto;
+        width: $height-high;
+        border-radius: $radius-l;
+        cursor: pointer;
+    }
+    h2 {
+        @extend .border-bottom;
+    }
+}
