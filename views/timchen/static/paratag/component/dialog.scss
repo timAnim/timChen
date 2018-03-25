@@ -1,0 +1,48 @@
+dialog {
+    @extend .in-bottom;
+    max-height: $height-max;
+    position: absolute;
+    display: block;
+    width: $width-dialog;
+    top: (100% - $height-max)/2;
+    left: 50%;
+    margin-left: -$width-dialog/2;
+    background-color: transparent;
+    header {
+        @extend .layout-h;
+    }
+    ul {
+        @extend .shade-card;
+        // @extend .layout-v;
+        margin-bottom: $padding-half;
+    }
+    article {
+        @extend .shade-list;
+    }
+}
+
+
+mask {
+    @extend .layout-f;
+    z-index: 10;
+    background-color: darken(rgba($bgcolor-back, 0.3), 30%);
+}
+
+.confirm {
+    @extend dialog;
+    h1 {
+        line-height: $height-high;
+        text-align: center;
+    }
+    button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    dialog {
+        left: 0;
+        margin: 0 1%;
+        width: 98%;
+    }
+}

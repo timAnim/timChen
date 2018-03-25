@@ -1,0 +1,17 @@
+dl[pt] {
+  display: flex;
+  flex-flow: row wrap;
+  cursor: pointer;
+  padding: $padding-half;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  dt {
+    flex: 1 0 100%;
+    line-height: 2em;
+  }
+  dd {
+    flex: 0 1 48%;
+    line-height: 1.8em;
+  }
+}
