@@ -89,7 +89,7 @@
         }
       },
       oBtn(opt) {
-        var btn = document.createElement('button');
+        var btn = document.createElement('div');
         btn.id = opt.id;
         btn.innerHTML = opt.innerHTML;
         this.css(btn, {
@@ -117,8 +117,8 @@
       }
     },
     icon = {
-      left: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" style = "transform:scale(0.625) translateY(-15%)"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" class=""></path></svg>',
-      right: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" style = "transform:scale(0.625) translateY(-15%)"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" class=""></path></svg>',
+      left: '<svg xmlns="http://www.w3.org/2000/svg" height="20" width="10"  viewBox="0 0 256 512"  style = "transform: translate(50%, 15%)"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" class=""></path></svg>',
+      right: '<svg xmlns="http://www.w3.org/2000/svg" height="20" width="10"  viewBox="0 0 256 512"  style = "transform: translate(100%, 15%)"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" class=""></path></svg>',
       pause: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 514 514"><path fill="white" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"></path></svg>',
       play: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 514 514"><path fill="white" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>',
     },
@@ -135,7 +135,6 @@
     util.css(this.outer, {
       overflow: 'hidden',
       position: 'relative',
-      borderRadius: '4px',
     })
 
     // ul(inner) 的样式

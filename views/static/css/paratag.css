@@ -73,6 +73,9 @@ a {
   cursor: pointer;
 }
 
+iframe{
+  border:none;
+}
 
 .clearfix {
   *zoom: 1;
@@ -339,7 +342,7 @@ body {
 }
 
 .wd-page {
-  width: 7.67rem;
+  max-width: 7.67rem;
 }
 
 .wd-auto {
@@ -461,7 +464,7 @@ body {
 }
 
 .fa-icon {
-  transform: scale(1.25);
+  transform: scale(1.25) translateY(12.5%);
 }
 
 @keyframes wave {
