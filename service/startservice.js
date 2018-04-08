@@ -7,8 +7,8 @@ var svc = new Service({
   script: 'C:\\www\\service\\startservice.js'
 });
  
-svc.on('install',function(){
-  svc.start();
-});
+// svc.on('install',function(){
+//   svc.start();
+// });
  
-svc.install();
+svc.uninstall();
