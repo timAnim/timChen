@@ -1,0 +1,32 @@
+@import "font-awesome/scss/font-awesome.scss";
+@import 'conf.scss';
+@import 'init.scss';
+@import 'paraTag.scss';
+@import 'anim.scss';
+@import 'dtPicker.scss';
+.pause-blur {
+    filter: blur(3px);
+    transition: transform $presto linear;
+    transition-delay: $presto;
+    transform: scale(0.95);
+}
+
+body {
+    &[main=true]>main,
+    &[aside=true]>aside,
+    &[footer=true] footer {
+        display: block;
+    }
+    &[main=false]>main,
+    &[aside=false]>aside,
+    &[footer=false]>footer {
+        display: none;
+    }
+    >modal[pause=true],
+    >main[pause=true] {
+        filter: blur(3px);
+        transition: transform $presto linear;
+        transition-delay: $presto;
+        transform: scale(0.95);
+    }
+}

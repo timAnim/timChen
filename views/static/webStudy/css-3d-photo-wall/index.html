@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3d-photo-wall</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        font-size: 625%;
+        height: 100%;
+    }
+
+    body {
+        overflow: hidden;
+        height: 100%;
+        font-family: 'Microsoft YaHei';
+        font-size: 0.14rem;
+    }
+
+    .wrapper {
+        margin: 0.16rem;
+    }
+
+    .wrapper .content {
+        width: 5.4rem;
+        height: 2.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .wrapper .content .pic {
+        list-style: none;
+        height: 1.2rem;
+        width: 1.2rem;
+        position: relative;
+        perspective: 600px;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+    }
+
+    .wrapper .content .pic .des {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #424242;
+        color: white;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+
+    .wrapper .content .pic img {
+        width: 100%;
+        height: 100%;
+    }
+    /*从上面进入*/
+
+    .inTop img {
+        animation: inTop 0.3s linear forwards;
+    }
+
+    .inTop .des {
+        animation: outBottom 0.3s linear forwards;
+    }
+    /*从右边进入*/
+
+    .inRight img {
+        animation: inRight 0.3s linear forwards;
+    }
+
+    .inRight .des {
+        animation: outLeft 0.3s linear forwards;
+    }
+    /*从下面进入*/
+
+    .inBottom img {
+        animation: inBottom 0.3s linear forwards;
+    }
+
+    .inBottom .des {
+        animation: outTop 0.3s linear forwards;
+    }
+    /*从左边进入*/
+
+    .inLeft img {
+        animation: inLeft 0.3s linear forwards;
+    }
+
+    .inLeft .des {
+        animation: outRight 0.3s linear forwards;
+    }
+    /*从上面离开*/
+
+    .outTop img {
+        animation: outTop 0.3s linear forwards;
+    }
+
+    .outTop .des {
+        animation: inBottom 0.3s linear forwards;
+    }
+
+    /*从右面离开*/
+
+    .outRight img {
+        animation: outRight 0.3s linear forwards;
+    }
+
+
+    .outRight .des {
+        animation: inLeft 0.3s linear forwards;
+    }
+
+    /*从下面离开*/
+    .outBottom img {
+        animation: outBottom 0.3s linear forwards;
+    }
+
+    .outBottom .des {
+        animation: inTop 0.3s linear forwards;
+    }
+
+    /*从左面离开*/
+
+    .outLeft img {
+        animation: outLeft 0.3s linear forwards;
+    }
+
+    .outLeft .des {
+        animation: inRight 0.3s linear forwards;
+    }
+
+    @keyframes inTop {
+        0% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, 180deg);
+        }
+        50% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, 90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+        }
+    }
+
+    @keyframes inRight {
+        0% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, 180deg);
+        }
+        50% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, 90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        }
+    }
+
+    @keyframes inBottom {
+        0% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, -180deg);
+        }
+        50% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, -90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+        }
+    }
+
+    @keyframes inLeft {
+        0% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, -180deg);
+        }
+        50% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, -90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        }
+    }
+
+    @keyframes outTop {
+        0% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+        }
+        50% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, 180deg);
+        }
+    }
+
+    @keyframes outRight {
+        0% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        }
+        50% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, 180deg);
+        }
+    }
+
+    @keyframes outLeft {
+        0% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+        }
+        50% {
+            transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, -90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, -1px) rotate3d(0, 1, 0, -180deg);
+        }
+    }
+
+    @keyframes outBottom {
+        0% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+        }
+        50% {
+            transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, -90deg);
+        }
+        100% {
+            transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, -180deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="content">
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg">
+            </li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+            <li class="pic">
+                <div class="des">点我查看</div>
+                <img src="./img/img01.jpg"></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    function initData() {
+        return Array.prototype.slice.call(document.getElementsByClassName('pic'))
+    }
+
+    (lis => {
+        function enterHdl(e) {
+            var x = e.x - (this.offsetLeft + this.clientWidth / 2),
+                y = e.y - (this.offsetTop + this.clientHeight / 2),
+                cls = 'pic in' + getDirect(x, y);
+            this.className = cls
+        }
+
+        function leaveHdl(e) {
+            var x = e.x - (this.offsetLeft + this.clientWidth / 2),
+                y = e.y - (this.offsetTop + this.clientHeight / 2),
+                cls = 'pic out' + getDirect(x, y);
+            this.className = cls
+        }
+
+        function getDirect(x, y) {
+            var res = Math.floor(Math.atan2(y, x) / (Math.PI / 4))
+            switch (res) {
+                case -2:
+                case -3:
+                    res = 'Top'
+                    break;
+                case -1:
+                case 0:
+                    res = 'Right'
+                    break;
+                case 1:
+                case 2:
+                    res = 'Bottom'
+                    break;
+                case 3:
+                case -4:
+                    res = 'Left'
+                    break;
+            }
+            return res
+        }
+
+        lis.forEach(li => {
+            li.addEventListener('mouseenter', enterHdl, false)
+            li.addEventListener('mouseleave', leaveHdl, false)
+        })
+    })(initData())
+    </script>
+</body>
+
+</html>
