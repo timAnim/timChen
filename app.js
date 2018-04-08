@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var blogs = require('./routes/blogs');
 var files = require('./routes/files');
+var projects = require('./routes/projects');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use('/', index)
 // 所有后台的请求
 app.use('/api/blogs', blogs);
 app.use('/api/files', files);
+app.use('/api/projects', projects);
 
 
 // catch 404 and forward to error handler
