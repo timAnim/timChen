@@ -4,11 +4,11 @@ var Service = require('node-windows').Service;
 var svc = new Service({
   name:'blog-service',
   description: '博客项目的后台',
-  script: 'C:\\www\\startservice.js'
+  script: 'C:\\www\\service\\startservice.js'
 });
  
-svc.on('install',function(){
-  svc.start();
-});
+// svc.on('install',function(){
+//   svc.start();
+// });
  
-svc.install();
+svc.uninstall();

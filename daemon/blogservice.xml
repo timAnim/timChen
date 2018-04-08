@@ -7,7 +7,7 @@
 	<argument>--harmony</argument>
 	<argument>C:\Users\Administrator\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js</argument>
 	<argument>--file</argument>
-	<argument>C:\www\service\startservice.js</argument>
+	<argument>C:\www\startservice.js</argument>
 	<argument>--log</argument>
 	<argument>blog-service wrapper</argument>
 	<argument>--grow</argument>
@@ -21,5 +21,5 @@
 	<argument>--stopparentfirst</argument>
 	<argument>undefined</argument>
 	<stoptimeout>30sec</stoptimeout>
-	<workingdirectory>C:\www\service</workingdirectory>
+	<workingdirectory>C:\www</workingdirectory>
 </service>
