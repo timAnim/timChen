@@ -9,6 +9,8 @@ var index = require('./routes/index');
 var blogs = require('./routes/blogs');
 var files = require('./routes/files');
 var projects = require('./routes/projects');
+var palettes = require('./routes/palettes');
+// var staff = require('./routes/staff');
 
 var app = express();
 
@@ -37,6 +39,8 @@ app.use('/', index)
 app.use('/api/blogs', blogs);
 app.use('/api/files', files);
 app.use('/api/projects', projects);
+app.use('/api/palettes', palettes);
+// app.use('/api/staff', staff);
 
 
 // catch 404 and forward to error handler

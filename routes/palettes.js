@@ -1,20 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Palette = require('../model/palette.js')
-var jwt = require('jwt-simple');
+var Palette = require('../schema/palette.js')
+// var jwt = require('jwt-simple');
 
 router.post('/upadd', function(req, res, next) {
-  var token = req.headers.token
-  var payload = jwt.decode(token, 'ued');
-  if (req.body.data._id) {
-    req.body.data.muser = payload.name
-    req.body.data.mdate = new Date()
-  } else {
-    req.body.data.cuser = payload.name
-    req.body.data.cuid = payload._id
-    req.body.data._id = new mongoose.Types.ObjectId()
-  }
+  // var token = req.headers.token
+  // var payload = jwt.decode(token, 'ued');
+  // if (req.body.data._id) {
+  //   req.body.data.muser = payload.name
+  //   req.body.data.mdate = new Date()
+  // } else {
+  //   req.body.data.cuser = payload.name
+  //   req.body.data.cuid = payload._id
+  //   req.body.data._id = new mongoose.Types.ObjectId()
+  // }
 
   var whereStr = { _id: req.body.data._id }
   Palette.update(whereStr, {

@@ -1,8 +1,8 @@
 var mongoose = require('mongoose')
-const DB_URL = 'mongodb://localhost:27017/ued'
+const DB_URL = 'mongodb://localhost:27017/blog'
 
 mongoose.Promise = global.Promise;
-mongoose.connect(DB_URL,{useMongoClient: true});
+mongoose.connect(DB_URL);
 
 mongoose.connection.on('connect', function () {    
     console.log('Mongoose connection open to ' + DB_URL);  
